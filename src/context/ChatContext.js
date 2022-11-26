@@ -8,7 +8,7 @@ import {
   export const ChatContext = createContext();
   
   export const ChatContextProvider = ({ children }) => {
-    const { currentUser } = useContext(AuthContext);
+    const { currUser } = useContext(AuthContext);
     const INITIAL_STATE = {
       chatId: "null",
       user: {},
@@ -20,9 +20,9 @@ import {
           return {
             user: action.payload,
             chatId:
-              currentUser.uid > action.payload.uid
-                ? currentUser.uid + action.payload.uid
-                : action.payload.uid + currentUser.uid,
+              currUser.uid > action.payload.uid
+                ? currUser.uid + action.payload.uid
+                : action.payload.uid + currUser.uid,
           };
   
         default:
