@@ -25,7 +25,7 @@ import {
                 : action.payload.uid + currUser.uid,    
           };
   
-        default:
+        default :
           return state;
       }
     };
