@@ -22,7 +22,7 @@ import {
             chatId:
               currUser.uid > action.payload.uid
                 ? currUser.uid + action.payload.uid
-                : action.payload.uid + currUser.uid,
+                : action.payload.uid + currUser.uid,    
           };
   
         default:
